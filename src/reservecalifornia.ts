@@ -45,11 +45,14 @@ export async function checkReserveCalifornia(
     SleepingUnitId: 0,
   };
 
-  const res = await fetch("https://calirdr.usedirect.com/RDR/rdr/search/grid", {
+const res = await fetch("https://calirdr.usedirect.com/RDR/rdr/search/grid", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
       Accept: "application/json",
+      "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 14_5) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.5 Safari/605.1.15",
+      "Origin": "https://www.reservecalifornia.com",
+      "Referer": "https://www.reservecalifornia.com/",
     },
     body: JSON.stringify(body),
   });
