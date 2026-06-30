@@ -4,3 +4,9 @@ node_modules/
 dist/
 .DS_Store
 *.log
+
+# Claude auth tokens — never commit (per global rule)
+.claude/
+
+# Local-only session continuity
+.remember/
